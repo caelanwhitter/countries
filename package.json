@@ -6,6 +6,12 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
+    "typeorm": "typeorm-ts-node-esm",
+    "migration:create": "npm run typeorm migration:create",
+    "migration:run": "npm run typeorm migration:run -- -d ./ormconfig.mjs",
+    "migration:revert": "npm run typeorm migration:revert -- -d ./ormconfig.mjs",
+    "migration:show": "npm run typeorm migration:show -- -d ./ormconfig.mjs",
+    "prebuild": "rimraf dist",
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
