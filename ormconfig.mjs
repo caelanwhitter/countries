@@ -17,5 +17,5 @@ export const typeOrmConfig = new DataSource({
   useUTC: true,
   synchronize: false,
   migrationsRun: false,
-  logging: ['query'],
+  // logging: ['query'],
 });

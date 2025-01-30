@@ -15,7 +15,7 @@ export default async function (
     schema: configService.get('DB_SCHEMA'),
     synchronize: false,
     migrationsRun: false,
-    logging: ['query'],
+    // logging: ['query'],
     migrations: ['src/migration/*.ts'],
   };
 }
