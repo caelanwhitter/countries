@@ -16,4 +16,12 @@ export class CountriesRepositoryService {
   ): Promise<CountryInfoEntity> {
     return this.countryInfoRepo.save(data);
   }
+
+  public async getAll(): Promise<CountryInfoEntity[]> {
+    return this.countryInfoRepo.find();
+  }
+
+  public async getById(id: number): Promise<CountryInfoEntity> {
+    return this.countryInfoRepo.findOne({ where: { id } });
+  }
 }
